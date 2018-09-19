@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-api-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 4000 ./test/index.test.js || true",
+    "dev": "nodemon index.js "
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "module-alias": "^2.1.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.6.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.14.2"
+  },
+  "eslintConfig": {
+    "extends": "./config/eslint.json"
+  },
+  "prettier": {
+    "printWidth": 180,
+    "tabWidth": 4,
+    "parser": "flow",
+    "singleQuote": true
+  }
+}

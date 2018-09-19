@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "config": ["./config"],
+      "models": ["./src/models"],
+      "utils": ["./src/utils"],
+      "routes": ["./src/routes"],
+      "constants": ["./src/constants"],
+      "tester": ["./src/utils/tester"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
