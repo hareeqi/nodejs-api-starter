@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express').Router;
 const { handleError } = require('./error');
 
 class Router {

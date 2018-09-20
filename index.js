@@ -1,5 +1,6 @@
 require('dotenv').config();
-require('./config/aliases');
+//setting up aliases from jest config
+require('./jest.config');
 const config = require('config');
 const express = require('express');
 const app = express();

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest ./test/index.test.js --config ./config/aliases.js",
+    "test": "jest --watch",
     "dev": "nodemon index.js "
   },
   "dependencies": {
