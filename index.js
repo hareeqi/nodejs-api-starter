@@ -28,5 +28,4 @@ process.on('uncaughtException', err => {
 app.use(config.API_PREFIX, routes);
 app.listen(config.PORT, () => {
     console.log(`Server Started on`, config.PORT);
-    config.isDev && require('tester').startTest();
 });

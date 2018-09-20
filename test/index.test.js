@@ -1,9 +1,12 @@
 require('dotenv').config();
-require('../config/aliases');
 
 console.log('======================================================================');
 console.log(`==========================   ${new Date().toLocaleTimeString()}   ============================`);
 console.log('======================================================================');
 
-require('./user.test');
-require('./product.test');
+test('jjjjjj', () => expect(1).toBe(1));
+
+//require('./user.test');
+//require('./product.test');
+
+//
