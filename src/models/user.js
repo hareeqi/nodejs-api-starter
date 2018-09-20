@@ -1,4 +1,4 @@
-const { sleep, error } = require('utils');
+const { sleep, error } = require('../utils');
 let users = [
     { id: 504, name: 'Mohammad Ali' },
     { id: 213, name: 'mustafa Ahmad' },
@@ -11,7 +11,6 @@ let users = [
 
 exports.create = u => {
     users.push(u);
-
     return u;
 };
 exports.getALL = async () => {
@@ -20,7 +19,8 @@ exports.getALL = async () => {
 
 exports.getByID = async id => {
     // sleeping to simulate DB calls or api requests
-    await sleep(0.001);
+
+    await sleep(2);
 
     const user = users.find(u => u.id == id);
 

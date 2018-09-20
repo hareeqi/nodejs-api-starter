@@ -1,5 +1,5 @@
-const { router } = require('utils');
-const { product } = require('models');
+const { router } = require('../utils');
+const { product } = require('../models');
 
 const app = router();
 

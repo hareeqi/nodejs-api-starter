@@ -1,4 +1,4 @@
-const { sleep, error } = require('utils');
+const { sleep, error } = require('../utils');
 let products = [
     { id: 504, name: 'Spoon' },
     { id: 213, name: 'Ball' },
@@ -15,7 +15,8 @@ class Products {
     }
     async getByID(id) {
         // sleeping to simulate DB calls or api requests
-        await sleep(1);
+        await sleep(2);
+
         const produ = products.find(p => p.id == id);
 
         if (!produ) {

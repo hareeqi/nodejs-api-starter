@@ -1,18 +1,8 @@
 require('dotenv').config();
-//setting up aliases from jest config
-require('./jest.config');
-const config = require('config');
+const config = require('./config');
 const express = require('express');
 const app = express();
-const routes = require('routes');
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// eslint-disable-next-line
-app.use((error, req, res, next) => {
-    res.status(400).json({ err: 'Illegel Server Operation' });
-});
+const routes = require('./src/routes');
 
 process.on('unhandledRejection', err => {
     console.error(err);
