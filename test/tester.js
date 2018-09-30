@@ -10,7 +10,7 @@ const testAPI = (method, path, desc, params, action) =>
             params = false;
         }
         // prettier-ignore
-        supertest(app)[method](path).send(params || {}).set('Accept', 'application/json').end( async (err, res) => {
+        supertest(app)[method]('/'+path).send(params || {}).set('Accept', 'application/json').end( async (err, res) => {
            if(err){
             done(err);
            } else {

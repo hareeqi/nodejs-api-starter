@@ -16,7 +16,6 @@ exports.create = u => {
 exports.getALL = async () => {
     return users;
 };
-
 exports.getByID = async id => {
     // sleeping to simulate DB calls or api requests
 
@@ -29,4 +28,14 @@ exports.getByID = async id => {
     }
 
     return user;
+};
+
+exports.update = (id, new_user) => {
+    const user = users.findIndex(u => u.id == id);
+
+    if (user === -1) {
+        throw error.USER_NOT_FOUND;
+    }
+    users[user] = new_user;
+    return users[user];
 };

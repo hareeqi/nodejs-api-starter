@@ -9,21 +9,21 @@ let products = [
     { id: 347, name: 'Batmobile' }
 ];
 
-class Products {
-    async getALL() {
-        return products;
+exports.create = async p => {
+    products.push(p);
+    return p;
+};
+exports.getALL = () => {
+    return products;
+};
+exports.getByID = async id => {
+    // sleeping to simulate DB calls or api requests
+    await sleep(2);
+
+    const produ = products.find(p => p.id == id);
+
+    if (!produ) {
+        throw error.PRODUCT_NOT_FOUND;
     }
-    async getByID(id) {
-        // sleeping to simulate DB calls or api requests
-        await sleep(2);
-
-        const produ = products.find(p => p.id == id);
-
-        if (!produ) {
-            throw error.PRODUCT_NOT_FOUND;
-        }
-        return produ;
-    }
-}
-
-module.exports = new Products();
+    return produ;
+};
