@@ -1,6 +1,9 @@
 const { test, assertError, ERROR, assert } = require('./tester');
 
 describe('Products Endpoints', () => {
+    test.get(`product`, 'Get all products', res => {
+        assert.equal(Array.isArray(res), true);
+    });
     test.post('product', 'Add new product', { id: 147, name: 'bat knife' }, res => {
         assert.equal(res.id, 147);
     });

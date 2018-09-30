@@ -1,6 +1,9 @@
 const { test, assertError, ERROR, assert } = require('./tester');
 
 describe('User Endpoints', () => {
+    test.get(`user/`, 'Get all users', res => {
+        assert.equal(Array.isArray(res), true);
+    });
     test.post('user/', 'Create new user', { id: 111, name: 'Ibrahim hammed' }, res => {
         assert.equal(res.id, 111);
     });
