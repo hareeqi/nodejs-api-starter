@@ -30,10 +30,10 @@ const assertError = (res, error) => {
     assert.equal(res.error, true);
     assert.equal(res.message, error.message);
 };
+let test = {};
+test.get = (...ar) => testAPI('get', ...ar);
+test.post = (...ar) => testAPI('post', ...ar);
+test.put = (...ar) => testAPI('put', ...ar);
+test.del = (...ar) => testAPI('delete', ...ar);
 
-const get = (...ar) => testAPI('get', ...ar);
-const post = (...ar) => testAPI('post', ...ar);
-const put = (...ar) => testAPI('put', ...ar);
-const del = (...ar) => testAPI('delete', ...ar);
-
-module.exports = { assertError, get, post, put, del, ERROR, assert };
+module.exports = { assertError, test, ERROR, assert };
