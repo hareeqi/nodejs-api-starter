@@ -7,7 +7,8 @@
     "test": "mocha ./test/index.test.js --watch --timeout 4000",
     "coverage": "istanbul cover _mocha ./test/index.test.js",
     "coverage-report": "open coverage/lcov-report/index.html",
-    "dev": "nodemon index.js "
+    "dev": "nodemon index.js",
+    "start": "node indexjs"
   },
   "dependencies": {
     "dotenv": "^6.0.0",

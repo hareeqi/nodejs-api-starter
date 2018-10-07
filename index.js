@@ -18,5 +18,6 @@ process.on('uncaughtException', err => {
 
 app.use(config.API_PREFIX, routes);
 app.listen(config.PORT, () => {
-    console.log(`Server Started on`, config.PORT);
+    console.log(`Server Started`);
+    console.log(`Base url:`, config.BASE_URL);
 });
