@@ -1,5 +1,6 @@
 .env
 .vscode
+.nyc_output
 coverage
 
 # Logs
